@@ -22,7 +22,7 @@ const Query = (props) => {
 
   useEffect(() => {
     setList(
-      queryHistory[props.type].filter((i) =>
+      queryHistory?.[props?.type]?.filter((i) =>
         i.toLowerCase().includes(searchQuery.toLowerCase())
       )
     ); // eslint-disable-next-line

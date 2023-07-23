@@ -17,7 +17,7 @@ const Output = () => {
 
   return (
     <div className="query-results w-[98%]">
-      {queryHistory.outputData.length > 0 ? (
+      {queryHistory?.outputData?.length > 0 ? (
         <>
           <div className="tab-bar">
             <span
@@ -35,11 +35,10 @@ const Output = () => {
           </div>
           <div className="query-details">
             <p className="text-2">
-              {/* Showing{" "} */}
               <span>
                 {tab === 0
                   ? queryHistory.outputData.length
-                  : Object.keys(queryHistory.outputData[0]).length}
+                  : Object.keys(queryHistory?.outputData?.[0])?.length}
               </span>{" "}
               rows in Set
               <span style={{ fontSize: "0.9rem" }} className="text-1">
@@ -49,7 +48,7 @@ const Output = () => {
             </p>
             <div className="export-btn">
               <CSVLink
-                data={queryHistory.outputData}
+                data={queryHistory?.outputData}
                 filename={"dataOutput.csv"}
               >
                 <button onClick={exportData}>
@@ -59,9 +58,9 @@ const Output = () => {
             </div>
           </div>
           {tab === 0 ? (
-            <Table result={queryHistory.outputData}></Table>
+            <Table result={queryHistory?.outputData}></Table>
           ) : (
-            <ColumnDetails result={queryHistory.outputData} />
+            <ColumnDetails result={queryHistory?.outputData} />
           )}
         </>
       ) : (

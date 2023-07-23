@@ -1,26 +1,12 @@
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import EditorPanel from "./EditorPanel";
 import Editor from "@monaco-editor/react";
 import MainContext from "@/Utils/MainContext";
 
 const CodeEditor = () => {
+  const { query, setQuery } = useContext(MainContext);
   const [darkMode, setdarkMode] = useState(true);
-
-  const [query, setQuery] = useState("SELECT * FROM internetData;");
-  const [queryHistory, setQueryHistory] = useState({
-    saved: [
-      "SELECT * FROM internetData;",
-      "SELECT id, first_name, last_name FROM internetData;",
-    ],
-    history: ["SELECT * FROM internetData;"],
-    outputData: [],
-  });
-
-  const contextValue = useMemo(
-    () => ({ query, setQuery, queryHistory, setQueryHistory }),
-    [query, queryHistory]
-  );
 
   const options = {
     autoIndent: "full",
@@ -46,20 +32,18 @@ const CodeEditor = () => {
 
   return (
     <div className="flex flex-col w-[98%]">
-      <MainContext.Provider value={contextValue}>
-        <div className="col-md-4 col-lg-3 col-xl-2">
-          <EditorPanel />
-        </div>
-        <div className="col-md-8 col-lg-9 col-xl-10 col-12 no-gutters">
-          <Editor
-            height="300px"
-            value={query}
-            language="sql"
-            theme={darkMode ? "vs-dark" : "vs-light"}
-            onChange={(newCode) => setQuery(newCode)}
-          />
-        </div>
-      </MainContext.Provider>
+      <div className="col-md-4 col-lg-3 col-xl-2">
+        <EditorPanel />
+      </div>
+      <div className="col-md-8 col-lg-9 col-xl-10 col-12 no-gutters">
+        <Editor
+          height="300px"
+          value={query}
+          language="sql"
+          theme={darkMode ? "vs-dark" : "vs-light"}
+          onChange={(newCode) => setQuery(newCode)}
+        />
+      </div>
     </div>
   );
 };

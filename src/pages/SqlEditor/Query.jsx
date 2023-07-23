@@ -4,10 +4,10 @@ import { useContext, useEffect, useState } from "react";
 const Query = (props) => {
   const { setQuery, queryHistory } = useContext(MainContext);
   const [searchQuery, setSearchQuery] = useState("");
-  const [list, setList] = useState(queryHistory[props.type]);
+  const [list, setList] = useState(queryHistory?.[props?.type]);
 
   const renderQueryList = (array) => {
-    return array.map((i) => {
+    return array?.map((i) => {
       return (
         <div className=" cursor-pointer query" key={i}>
           <code onClick={() => setQuery(i)}>{i}</code>
@@ -17,13 +17,13 @@ const Query = (props) => {
   };
 
   useEffect(() => {
-    setList(queryHistory[props.type]);
+    setList(queryHistory?.[props?.type]);
   }, [props, queryHistory]);
 
   useEffect(() => {
     setList(
       queryHistory?.[props?.type]?.filter((i) =>
-        i.toLowerCase().includes(searchQuery.toLowerCase())
+        i?.toLowerCase()?.includes(searchQuery?.toLowerCase())
       )
     ); // eslint-disable-next-line
   }, [searchQuery]);
@@ -37,7 +37,7 @@ const Query = (props) => {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-      {list.length > 0 ? (
+      {list?.length > 0 ? (
         renderQueryList(list)
       ) : (
         <div className="placeholder-text">

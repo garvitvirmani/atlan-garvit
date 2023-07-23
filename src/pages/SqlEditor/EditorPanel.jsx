@@ -1,8 +1,6 @@
 import MainContext from "@/Utils/MainContext";
 import { useContext } from "react";
-// import MainContext from "../../MainContext";
-// import { queryDataAlt as queryData } from "../../assets/data/data";
-// import { queryData2 } from "../../assets/data/data";
+
 import { dumpData } from "../../../public/dumpData";
 import { dumpData as queryData } from "../../../public/dumpData";
 

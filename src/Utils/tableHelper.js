@@ -1,11 +1,11 @@
 const getTableRowsFromData = (arr) => {
   const keys = Object.keys(arr[0]);
-  return arr.map((i) => {
+  return arr.map((i, index) => {
     return (
-      <tr>
-        {keys.map((a) => {
-          return <td>{i[a]}</td>;
-        })}
+      <tr key={index}>
+        {keys.map((a, index) => (
+          <td key={index}>{i[a]}</td>
+        ))}
       </tr>
     );
   });
@@ -15,8 +15,8 @@ const getTableHeadFromData = (arr) => {
   const keys = Object.keys(arr[0]);
   return (
     <tr>
-      {keys.map((i) => {
-        return <td>{i}</td>;
+      {keys.map((i, index) => {
+        return <td key={index}>{i}</td>;
       })}
     </tr>
   );
@@ -24,9 +24,9 @@ const getTableHeadFromData = (arr) => {
 
 const getTableColumns = (arr) => {
   const keys = Object.keys(arr[0]);
-  return keys.map((i) => {
+  return keys.map((i, index) => {
     return (
-      <tr>
+      <tr key={index}>
         <td>{i}</td>
       </tr>
     );

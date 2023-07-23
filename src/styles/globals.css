@@ -15,13 +15,20 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .p-15 {
+    @apply font-normal text-[15px] md:text-[18px] my-[20px] text-center md:text-start;
+  }
+  .h1-hero {
+    @apply font-extralight text-[40px] sm:text-[40px] md:text-[52px] text-center md:text-start md:w-auto;
+  }
+  .h2-section-title {
+    @apply text-[35px] sm:text-[40px] text-center md:text-start font-light pb-5 leading-10;
+  }
+  .h2-section-title-center {
+    @apply text-[35px] sm:text-[40px] text-center font-light pb-5 leading-10;
+  }
+  .section-container {
+    @apply xl:container xl:mx-auto mb-10 md:mb-20;
+  }
 }

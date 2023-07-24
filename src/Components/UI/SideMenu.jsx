@@ -18,12 +18,12 @@ export const SideMenu = () => {
               x: "100%",
             }}
             transition={{ type: "spring", bounce: 0, duration: 0.1 }}
-            className="text-white shadow-lg top-0 right-0 max-w-sm h-screen"
+            className="text-white shadow-lg top-1 right-0 max-w-sm h-screen"
             style={{ top: "65px", borderRadius: "20px" }}
           >
             <button
               onClick={() => setSideMenu((sideMenu) => !sideMenu)}
-              className="bg-white text-black h-8 w-8 mb-2 rounded-full hidden md:block"
+              className="bg-black text-white dark:bg-white dark:text-black h-8 w-8 mb-2 rounded-full hidden md:block"
             >
               &times;
             </button>
@@ -33,7 +33,7 @@ export const SideMenu = () => {
       ) : (
         <button
           onClick={() => setSideMenu((sideMenu) => !sideMenu)}
-          className="bg-white text-black h-8 w-8  mb-2 rounded-full hidden md:block"
+          className="bg-black text-white dark:bg-white dark:text-black h-8 w-8  mb-2 rounded-full hidden md:block"
           style={{ top: "60px" }}
         >
           {"<"}

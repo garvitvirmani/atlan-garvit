@@ -71,7 +71,7 @@ export const WaveH1 = ({
               delay: index * delay,
             },
           }}
-          className="text-white"
+          className="dark:text-white text-black"
         >
           {letter}
         </m.span>

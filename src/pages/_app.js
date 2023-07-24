@@ -1,10 +1,33 @@
 import Layout from "@/Components/Layout/Layout";
 import Navbar from "@/Components/Navbar/Navbar";
+import MainContext from "@/Utils/MainContext";
 import "@/styles/globals.css";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function App({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(true);
+
+  const [query, setQuery] = useState("SELECT * FROM internetData;");
+  const [queryHistory, setQueryHistory] = useState({
+    saved: [
+      "SELECT * FROM internetData;",
+      "SELECT id, first_name, last_name FROM internetData;",
+    ],
+    history: ["SELECT * FROM internetData;"],
+    outputData: [],
+  });
+
+  const contextValue = useMemo(
+    () => ({
+      query,
+      setQuery,
+      queryHistory,
+      setQueryHistory,
+      darkMode,
+      setDarkMode,
+    }),
+    [query, queryHistory, darkMode]
+  );
 
   // Check for saved user preference and apply dark mode on initial load
   useEffect(() => {
@@ -24,8 +47,14 @@ export default function App({ Component, pageProps }) {
   }, [darkMode]);
 
   return (
-    <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
-      <Component {...pageProps} darkMode={darkMode} setDarkMode={setDarkMode} />
-    </Layout>
+    <MainContext.Provider value={contextValue}>
+      <Layout>
+        <Component
+          {...pageProps}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+      </Layout>
+    </MainContext.Provider>
   );
 }

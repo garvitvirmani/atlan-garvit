@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 
 import { LazyMotion, domAnimation } from "framer-motion";
 import Navbar from "../Navbar/Navbar";
+import MainContext from "@/Utils/MainContext";
+import ThemeSwitch from "@/Utils/ThemeSwitch";
 
-const Layout = ({ children, darkMode, setDarkMode }) => {
+const Layout = ({ children }) => {
+  const { darkMode, setDarkMode } = useContext(MainContext);
+
   const handleDarkModeToggle = () => {
     setDarkMode(!darkMode);
   };
@@ -14,12 +18,6 @@ const Layout = ({ children, darkMode, setDarkMode }) => {
       <LazyMotion features={domAnimation}>
         <Navbar />
         {children}
-        <button
-          onClick={handleDarkModeToggle}
-          className="fixed bottom-4 right-4 px-3 py-2 bg-gray-800 text-white rounded-lg shadow-md z-30"
-        >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
       </LazyMotion>
     </div>
   );

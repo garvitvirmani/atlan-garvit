@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import CTAButton from "../UI/CTA/CTAButton";
 import { MobileNavBarDropDown } from "./MobileNavBarDropDown";
+import Toggle from "../UI/Toggle";
+import ThemeSwitch from "@/Utils/ThemeSwitch";
 
 const Navbar = () => {
   const [IsMobileNavBarDropDownOpen, setIsMobileNavBarDropDownOpen] =
@@ -93,7 +95,7 @@ const Navbar = () => {
                     return (
                       <Link
                         href={e?.attributes?.url}
-                        className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="dark:text-white text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                         key={Index}
                         target="_blank"
                       >
@@ -104,9 +106,9 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
-          <div className=" flex md:hidden">
+          <div className=" flex md:hidden gap-5 ">
             {/* <!-- Mobile menu button --> */}
+            <ThemeSwitch />
             <motion.button
               whileTap={{ scale: 0.8 }}
               initial={{ opacity: 0 }}
@@ -125,6 +127,7 @@ const Navbar = () => {
             </motion.button>
           </div>
           <div className="hidden md:flex mr-3 gap-5 items-center">
+            <ThemeSwitch />
             <div className="w-[150px]">
               <CTAButton text={"Get Started !"} />
             </div>

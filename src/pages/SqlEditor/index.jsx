@@ -10,32 +10,15 @@ import { SideMenu } from "@/Components/UI/SideMenu";
 // import "font-awesome/css/font-awesome.min.css";
 
 function SqlEditor() {
-  const [query, setQuery] = useState("SELECT * FROM internetData;");
-  const [queryHistory, setQueryHistory] = useState({
-    saved: [
-      "SELECT * FROM internetData;",
-      "SELECT id, first_name, last_name FROM internetData;",
-    ],
-    history: ["SELECT * FROM internetData;"],
-    outputData: [],
-  });
-
-  const contextValue = useMemo(
-    () => ({ query, setQuery, queryHistory, setQueryHistory }),
-    [query, queryHistory]
-  );
-
   return (
     <div className="pt-[60px]">
-      <MainContext.Provider value={contextValue}>
-        <div className="flex">
-          <div className="flex flex-col items-center w-full p-10 gap-15">
-            <CodeEditor />
-            <Output />
-          </div>
-          <SideMenu />
+      <div className="flex">
+        <div className="flex flex-col items-center w-full p-10 gap-15">
+          <CodeEditor />
+          <Output />
         </div>
-      </MainContext.Provider>
+        <SideMenu />
+      </div>
     </div>
   );
 }

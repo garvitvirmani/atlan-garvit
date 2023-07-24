@@ -21,7 +21,7 @@ export default function HeroSection() {
       y: 300,
     },
     onscreen: {
-      y: 50,
+      y: 20,
       rotate: 0,
       transition: {
         type: "spring",
@@ -33,7 +33,7 @@ export default function HeroSection() {
   return (
     <>
       <section className="section-container pt-3 md:pt-12">
-        <div className="flex flex-col md:flex-row md:justify-evenly gap-[30px] items-center pt-[100px] pb-[50px] relative top-0">
+        <div className="flex flex-col md:flex-row md:justify-evenly gap-[50px] items-center pt-[100px] pb-[50px] relative top-0">
           <div className="w-full md:w-[40%] lg:w-[50%] px-3 flex flex-col justify-between h-4/5">
             <WaveH1
               textP2={data?.Heading.part_2}
@@ -69,19 +69,8 @@ export default function HeroSection() {
                 speed={30}
               />
             </m.div>
-            <m.div
-              initial={{ y: 40, opacity: 0 }}
-              animate={{
-                y: 0,
-                opacity: 1,
-                transition: { duration: 0.8, delay: 1, ease: "easeInOut" },
-              }}
-              className="flex gap-5 h-12 mt-7 justify-center md:justify-start"
-            >
-              <div className="mt-[-4px]">{/* <MediaIconsGroup /> */}</div>
-            </m.div>
           </div>
-          <div className="lg:w-[650px] w-[300px] ">
+          <div className="">
             <m.div
               style={{ position: "relative", left: "0px" }}
               initial="offscreen"

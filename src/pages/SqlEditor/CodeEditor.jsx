@@ -5,8 +5,7 @@ import Editor from "@monaco-editor/react";
 import MainContext from "@/Utils/MainContext";
 
 const CodeEditor = () => {
-  const { query, setQuery } = useContext(MainContext);
-  const [darkMode, setdarkMode] = useState(true);
+  const { query, setQuery, darkMode } = useContext(MainContext);
 
   const options = {
     autoIndent: "full",

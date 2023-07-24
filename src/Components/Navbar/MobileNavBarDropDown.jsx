@@ -48,7 +48,7 @@ export function MobileNavBarDropDown() {
             >
               <Link
                 href={e?.attributes?.url}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="dark:text-white text-black hover:text-white px-3 py-2 rounded-md text-md font-medium"
                 target="_blank"
               >
                 {e?.attributes?.title}

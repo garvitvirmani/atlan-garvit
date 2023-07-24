@@ -34,21 +34,7 @@ const nextConfig = {
       },
     ];
   },
-  // experimental
-  webpack: (config, { isServer }) => {
-    // Customize the Webpack configuration
-    if (!isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        commons: {
-          name: "commons",
-          chunks: "all",
-          minChunks: 2,
-        },
-      };
-    }
-    return config;
-  },
+
   reactStrictMode: true,
 };
 

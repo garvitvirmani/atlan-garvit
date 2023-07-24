@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { CSVLink } from "react-csv";
 import ColumnDetails from "./ColumnDetails";
 import Table from "@/Components/UI/Table/Table";
+import CTAButton from "@/Components/UI/CTA/CTAButton";
 
 const Output = () => {
   const [tab, setTab] = useState(0);
@@ -16,9 +17,9 @@ const Output = () => {
   };
 
   return (
-    <div className="query-results w-[98%]">
+    <div className="query-results w-[98%] dark:text-white">
       {queryHistory?.outputData?.length > 0 ? (
-        <>
+        <div className="flex flex-col gap-[10px]">
           <div className="tab-bar">
             <span
               className={`tabs ${tab === 0 ? "active" : ""} cursor-pointer`}
@@ -51,9 +52,9 @@ const Output = () => {
                 data={queryHistory?.outputData}
                 filename={"dataOutput.csv"}
               >
-                <button onClick={exportData}>
-                  Export <span className="fa fa-download"></span>
-                </button>
+                <div onClick={exportData} className="w-[120px]">
+                  <CTAButton text="export" color="light" deactivate />
+                </div>
               </CSVLink>
             </div>
           </div>
@@ -62,10 +63,9 @@ const Output = () => {
           ) : (
             <ColumnDetails result={queryHistory?.outputData} />
           )}
-        </>
+        </div>
       ) : (
-        <div className="placeholder-text">
-          <span className="fa fa-play"></span>
+        <div className="placeholder-text dark:text-white">
           <p>Output will appear here !!</p>
         </div>
       )}

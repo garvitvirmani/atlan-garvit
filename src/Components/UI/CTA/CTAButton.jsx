@@ -1,19 +1,22 @@
-import React, { memo, useState } from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import React, { useState } from "react";
 import { m } from "framer-motion";
 
 //default prop types : Color - "inherit", "white" ; Text: String
 
-const CTAButton = ({ color = "dark", text, link }) => {
+const CTAButton = ({
+  color = "dark",
+  text,
+  link = "/SqlEditor",
+  deactivate = false,
+}) => {
   const [isHover, setIsHover] = useState(false);
-
   return (
     <m.button
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      onClick={() =>
-        (window.location = link ?? "https://app.density.exchange/auth/signup")
-      }
+      onClick={() => {
+        if (!deactivate) window.location = link;
+      }}
       style={{
         color: color !== "dark" ? "black" : "white",
         backgroundColor: color !== "dark" ? "#ADD8E6" : "black",

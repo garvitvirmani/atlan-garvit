@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { dumpData } from "../../../public/dumpData";
 import { dumpData as queryData } from "../../../public/dumpData";
-
+import CTAButton from "@/Components/UI/CTA/CTAButton";
 const EditorPanel = () => {
   const { query, setQueryHistory, setQuery } = useContext(MainContext);
 
@@ -54,19 +54,19 @@ const EditorPanel = () => {
   return (
     <div className="flex gap-6">
       <div className="btn primary-btn">
-        <button onClick={() => runQuery()}>
-          <span className="fa fa-play me-1"></span>Run
-        </button>
+        <div onClick={() => runQuery()}>
+          <CTAButton text={"RUN"} deactivate={true} color="light" />
+        </div>
       </div>
       <div className="btn secondary-btn">
-        <button onClick={() => saveQuery()}>
-          <span className="fa fa-save me-1"></span>Save
-        </button>
+        <div onClick={() => saveQuery()}>
+          <CTAButton text={"SAVE"} deactivate={true} />
+        </div>
       </div>
       <div className="btn alert-btn">
-        <button onClick={() => clearQuery()}>
-          <span className="fa fa-times me-1"></span>Clear
-        </button>
+        <div onClick={() => clearQuery()}>
+          <CTAButton text={"CLEAR"} deactivate={true} />
+        </div>
       </div>
     </div>
   );

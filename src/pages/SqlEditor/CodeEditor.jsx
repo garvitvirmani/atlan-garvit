@@ -30,7 +30,7 @@ const CodeEditor = () => {
   };
 
   return (
-    <div className="flex flex-col w-[98%]">
+    <div className="flex flex-col w-[98%] gap-[30px]">
       <div className="col-md-4 col-lg-3 col-xl-2">
         <EditorPanel />
       </div>

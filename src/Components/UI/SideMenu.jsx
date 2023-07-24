@@ -17,7 +17,7 @@ export const SideMenu = () => {
             exit={{
               x: "100%",
             }}
-            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+            transition={{ type: "spring", bounce: 0, duration: 0.1 }}
             className="text-white shadow-lg top-0 right-0 max-w-sm h-screen"
             style={{ top: "65px", borderRadius: "20px" }}
           >

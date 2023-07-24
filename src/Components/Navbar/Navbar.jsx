@@ -12,10 +12,7 @@ import ThemeSwitch from "@/Utils/ThemeSwitch";
 const Navbar = () => {
   const [IsMobileNavBarDropDownOpen, setIsMobileNavBarDropDownOpen] =
     useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [ContestDetails, setContestDetails] = useState();
-  const [NavbarIcons, setNavbarIcons] = useState([0]);
 
   const NavBarMenu = [
     {
@@ -43,22 +40,6 @@ const Navbar = () => {
     }
   }, [IsMobileNavBarDropDownOpen]);
 
-  //hide navbar when scroll direction is down and vise versa
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const isVisible =
-        prevScrollPos > currentScrollPos || currentScrollPos <= 200;
-      setPrevScrollPos(currentScrollPos);
-      setVisible(isVisible);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
-
   return (
     <>
       <nav
@@ -81,12 +62,6 @@ const Navbar = () => {
                   loading="eager"
                 />
               </Link>
-
-              {/* <div className=" hidden lg:block absolute -bottom-[12px] right-1">
-                <Link href={"#"}>
-                  <span className="blink">Contest !</span>
-                </Link>
-              </div> */}
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">

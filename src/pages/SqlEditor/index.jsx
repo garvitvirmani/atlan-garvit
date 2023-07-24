@@ -13,7 +13,7 @@ function SqlEditor() {
   return (
     <div className="pt-[60px]">
       <div className="flex">
-        <div className="flex flex-col items-center w-full p-10 gap-15">
+        <div className="flex flex-col items-center w-full p-10 gap-[30px]">
           <CodeEditor />
           <Output />
         </div>

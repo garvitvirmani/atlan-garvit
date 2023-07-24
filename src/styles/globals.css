@@ -62,7 +62,7 @@ body {
   border-radius: 6px;
   margin: 1rem 1rem 1rem 1rem;
   /* min-height: 85vh; */
-  height: 85vh;
+  height: 90h;
   overflow: auto;
   background-color: whitesmoke;
   padding: 1rem;
@@ -139,11 +139,7 @@ div.sidebar-item:nth-child(2) {
   border: none;
   color: var(--white);
 }
-.query-results {
-  padding: 0.5rem 1rem;
-  overflow: clip;
-  /* height: 90vh; */
-}
+
 .query-details {
   display: flex;
   justify-content: space-between;
@@ -180,10 +176,7 @@ th {
 .query-table table {
   width: 100%;
 }
-.query-results .details {
-  display: flex;
-  justify-content: space-evenly;
-}
+
 .query-results .tabs {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
@@ -216,9 +209,7 @@ th {
 .cursor-pointer {
   cursor: pointer;
 }
-.query-results .placeholder-text {
-  font-size: 2rem;
-}
+
 .placeholder-text {
   color: rgba(0, 0, 0, 0.35);
   font-weight: 700;

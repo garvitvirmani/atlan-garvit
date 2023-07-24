@@ -9,11 +9,11 @@ export default function HeroSection() {
   const data = {
     Heading: {
       part_1: "",
-      part_2: "Make every Trade count with ",
+      part_2: "Best SQL editor",
       part_3: "",
-      part_4: "Crypto Futures",
+      part_4: "Quick and Easy",
     },
-    subHeading: "bbkj  kllklk",
+    subHeading: "Try now for free!!!",
   };
 
   const cardVariants = {
@@ -50,7 +50,7 @@ export default function HeroSection() {
               className="flex justify-center md:justify-start"
             >
               <div className=" py-5 w-[150px]  md:justify-start">
-                <CTAButton color="green" text={"TRADE NOW"} />
+                <CTAButton color="green" text={"TRY NOW"} />
               </div>
             </m.div>
             <m.div

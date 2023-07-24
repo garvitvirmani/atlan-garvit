@@ -29,7 +29,7 @@ export function MobileNavBarDropDown() {
         position: "fixed",
         inset: "60px 0px 0px 0px",
       }}
-      className="flex flex-col justify-start p-4 bg-primary z-30 overflow-hidden"
+      className="flex flex-col justify-start p-4 bg-blue-800 z-30 overflow-hidden"
     >
       <motion.ul
         initial={{ y: 50, opacity: 0 }}

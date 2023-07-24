@@ -1,6 +1,6 @@
+import Layout from "@/Components/Layout/Layout";
 import Navbar from "@/Components/Navbar/Navbar";
 import "@/styles/globals.css";
-import { LazyMotion, domAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }) {
@@ -23,25 +23,9 @@ export default function App({ Component, pageProps }) {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
-  const handleDarkModeToggle = () => {
-    setDarkMode(!darkMode);
-  };
   return (
-    <div className="dark:bg-gray-900 min-h-[100vh]">
-      <LazyMotion features={domAnimation}>
-        <Navbar />
-        <button
-          onClick={handleDarkModeToggle}
-          className="fixed bottom-4 right-4 px-3 py-2 bg-gray-800 text-white rounded-lg shadow-md z-30"
-        >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-        <Component
-          {...pageProps}
-          darkMode={darkMode}
-          setDarkMode={setDarkMode}
-        />
-      </LazyMotion>
-    </div>
+    <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
+      <Component {...pageProps} darkMode={darkMode} setDarkMode={setDarkMode} />
+    </Layout>
   );
 }

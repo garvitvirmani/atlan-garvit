@@ -33,7 +33,7 @@ export default function HeroSection() {
   return (
     <>
       <section className="section-container pt-3 md:pt-12">
-        <div className="flex flex-col md:flex-row md:justify-evenly gap-[50px] items-center pt-[100px] pb-[50px] relative top-0">
+        <div className="flex flex-col md:flex-row md:justify-evenly gap-[50px] items-center pt-[100px] pb-[40px] relative top-0">
           <div className="w-full md:w-[40%] lg:w-[50%] px-3 flex flex-col justify-between h-4/5">
             <WaveH1
               textP2={data?.Heading.part_2}
@@ -70,7 +70,7 @@ export default function HeroSection() {
               />
             </m.div>
           </div>
-          <div className="">
+          <div className="lg:w-[650px] w-[300px] ">
             <m.div
               style={{ position: "relative", left: "0px" }}
               initial="offscreen"
@@ -83,12 +83,12 @@ export default function HeroSection() {
               >
                 <Image
                   src={"/images/code_editor.gif"}
-                  className="hidden lg:block"
                   width={400}
                   height={200}
                   alt="website trading"
                   priority
                   loading="eager"
+                  layout="responsive" // Set layout to responsive
                 />
               </m.div>
             </m.div>

@@ -1,4 +1,4 @@
-import SideBar from "@/pages/SqlEditor/SideBar";
+import SideBar from "@/Components/SideBar";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ export const SideMenu = () => {
           >
             <button
               onClick={() => setSideMenu((sideMenu) => !sideMenu)}
-              className="bg-white text-black h-8 w-8 block mb-2 rounded-full"
+              className="bg-white text-black h-8 w-8 mb-2 rounded-full hidden md:block"
             >
               &times;
             </button>
@@ -33,7 +33,7 @@ export const SideMenu = () => {
       ) : (
         <button
           onClick={() => setSideMenu((sideMenu) => !sideMenu)}
-          className="bg-white text-black h-8 w-8 block mb-2 rounded-full"
+          className="bg-white text-black h-8 w-8  mb-2 rounded-full hidden md:block"
           style={{ top: "60px" }}
         >
           {"<"}

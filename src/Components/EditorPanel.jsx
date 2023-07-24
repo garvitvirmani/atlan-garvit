@@ -1,8 +1,8 @@
 import MainContext from "@/Utils/MainContext";
 import { useContext } from "react";
 
-import { dumpData } from "../../../public/dumpData";
-import { dumpData as queryData } from "../../../public/dumpData";
+import { dumpData } from "../../public/dumpData";
+import { dumpData as queryData } from "../../public/dumpData";
 import CTAButton from "@/Components/UI/CTA/CTAButton";
 const EditorPanel = () => {
   const { query, setQueryHistory, setQuery } = useContext(MainContext);

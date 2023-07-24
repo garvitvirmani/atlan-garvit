@@ -1,5 +1,5 @@
 import { getTableColumns } from "@/Utils/tableHelper";
-import { dumpData } from "../../../public/dumpData";
+import { dumpData } from "../../public/dumpData";
 
 const ColumnDetails = () => {
   return (

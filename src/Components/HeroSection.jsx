@@ -70,7 +70,7 @@ export default function HeroSection() {
               />
             </m.div>
           </div>
-          <div className="lg:w-[650px] w-[300px] ">
+          <div className="">
             <m.div
               style={{ position: "relative", left: "0px" }}
               initial="offscreen"
@@ -78,13 +78,13 @@ export default function HeroSection() {
               viewport={{ once: true, amount: 0 }}
             >
               <m.div
-                className="relative rounded-[20px]"
+                className="relative rounded-[20px] md:w-[400px]"
                 variants={cardVariants}
               >
                 <Image
                   src={"/images/code_editor.gif"}
-                  width={400}
-                  height={200}
+                  width={0}
+                  height={0}
                   alt="website trading"
                   priority
                   loading="eager"

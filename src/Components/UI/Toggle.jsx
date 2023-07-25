@@ -67,6 +67,7 @@ const Toggle = () => {
     <button
       className="w-12 h-6 rounded-full dark:bg-white bg-black flex items-center justify-center transition duration-300 focus:outline-none shadow"
       onClick={toggleTheme}
+      aria-label="theme switch"
     >
       {switchTheme()}
     </button>

@@ -290,3 +290,8 @@ code {
 .floating-box-2 {
   top: -20px;
 }
+.transition-hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 1s 0.5s ease, opacity 0.5s ease;
+}

@@ -13,6 +13,7 @@ const Navbar = () => {
   const [IsMobileNavBarDropDownOpen, setIsMobileNavBarDropDownOpen] =
     useState(false);
   const [visible, setVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const NavBarMenu = [
     {
@@ -39,6 +40,21 @@ const Navbar = () => {
       document.body.classList.remove("no-scroll");
     }
   }, [IsMobileNavBarDropDownOpen]);
+
+  //hide navbar when scroll direction is down and vise versa
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isVisible = currentScrollPos <= 60;
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   return (
     <>

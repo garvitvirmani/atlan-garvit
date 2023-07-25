@@ -83,8 +83,8 @@ export default function HeroSection() {
               >
                 <Image
                   src={"/images/code_editor.gif"}
-                  width={0}
-                  height={0}
+                  width={600}
+                  height={450}
                   alt="website trading"
                   priority
                   loading="eager"

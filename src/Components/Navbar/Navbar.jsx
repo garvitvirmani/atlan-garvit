@@ -111,6 +111,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
               aria-expanded="false"
+              aria-label="hamburger menu"
               onClick={() =>
                 setIsMobileNavBarDropDownOpen(!IsMobileNavBarDropDownOpen)
               }

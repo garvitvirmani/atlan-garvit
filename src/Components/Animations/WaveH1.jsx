@@ -120,7 +120,7 @@ export const WaveH1 = ({
               delay: index * delay * 2,
             },
           }}
-          className="font-overpass text-blue-800"
+          className="font-overpass text-blue-400"
         >
           {letter}
         </m.span>

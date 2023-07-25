@@ -22,6 +22,7 @@ const CTAButton = ({
         backgroundColor: color !== "dark" ? "#ADD8E6" : "black",
       }}
       className={`w-full relative rounded-full py-2 px-1.5 min-h-[40px] border-transparent border  text-sm text-light flex justify-evenly text-center overflow-hidden`}
+      aria-label="Click me"
     >
       <m.p
         initial={{ y: 0 }}

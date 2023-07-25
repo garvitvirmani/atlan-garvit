@@ -66,7 +66,7 @@ const Output = () => {
         </div>
       ) : (
         <div className="placeholder-text dark:text-white">
-          <p>Output will appear here !!</p>
+          <p>Output will appear here ..</p>
         </div>
       )}
     </div>

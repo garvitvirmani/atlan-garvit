@@ -65,21 +65,6 @@ const FloatingIcons = () => {
   ]);
   const [Lists, setLists] = useState();
 
-  //sample routes, should contain a key with headername and value as array of objects
-  // const navList = [
-  //   {
-  //     route: "#",
-  //     name: "Sample Routecdhvcbh",
-  //     icon: "/images/service.svg"
-  //   },
-  //   {
-  //     route: "#",
-  //     name: "Sample Route",
-  //     icon: "/images/service.svg"
-  //   },
-  //
-  // ];
-
   return (
     <div
       className="hidden md:visible fixed w-[50px] h-[300px] bg-[#ADD8E6] md:flex flex-col items-center floating-icons-wrapper justify-evenly"

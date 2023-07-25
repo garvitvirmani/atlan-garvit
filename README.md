@@ -4,25 +4,23 @@
 
 **Link to the application:** [Atlan SQL Editor](https://atlan-garvit.vercel.app/)
 
-## Introduction
-
 This is a web app that allows users to run SQL queries in an online editor and analyze the query results.
 
-## Data
+## Data Dump
 
-The data used in the application is generated from [Mockaroo](https://www.mockaroo.com/), a website that provides mock data. The data is stored as a local JSON object, but CSV files can also be used with a different logic or a pre-existing format conversion library.
+The data used in the application is generated online from a website that provides mock data. The data is stored as a local JSON object, but CSV files can also be used with a different logic or a pre-existing format conversion library.
 
 ## Page Speed and Optimization
 
-For analyzing page optimization, I have utilized Google's Lighthouse tool and Page Speed Insights to evaluate page load time and compliance with web standards. Additionally, GTMetrix has been used to cross-check the results. On a laptop browser, the time to be interactive for both the Homepage and the SQL Editor page is **0.5 seconds**.
+I've employed Google's Lighthouse tool and Page Speed Insights to assess the loading speed and adherence to web standards of the website. Furthermore, I've cross-verified the results using GTMetrix. When accessing the Homepage and the SQL Editor page on a laptop browser, the time it takes for both pages to become interactive is an impressive **0.5 seconds**.
 
-### 1. Page Load Time
+### 1. Website Load Time
 
-The page load time considered here is the time it takes for the site to become interactive, and in all cases shown below, it falls well within Google's specified time for mobile and desktop devices. This is a critical metric from the user's perspective as it enables quick navigation on the site.
+In this analysis, we are focusing on the page load time, which refers to the duration it takes for the website to become fully interactive. In all instances demonstrated below, the page load time comfortably meets Google's recommended standards for both mobile and desktop devices. This is an essential measure as it significantly impacts the user experience, ensuring swift and smooth navigation on the website.
 
-The detailed screenshots with respective page load times are attached in a later section of this document.
+For more comprehensive information, you can find detailed screenshots depicting the respective page load times in a later section of this document.
 
-### 2. Optimizing the Page Load Time and other Metrics
+### 2. Optimizing the Page Load Time and other web vitals
 
 1. The application has been turned into a **PWA (Progressive Web App)** to optimize it, as Google promotes the use of such installable apps. This also allows the web app to be used offline as it can be installed.
 
@@ -62,36 +60,7 @@ The detailed screenshots with respective page load times are attached in a later
 <img width="360" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/WhatsApp%20Image%202023-07-25%20at%2014.29.56.jpeg?raw=true">
 <img width="360" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/WhatsApp%20Image%202023-07-25%20at%2014.29.57.jpeg?raw=true">
 
-## Problem Statement
-
-### SQL Editor
-
-Create a SQL editor view where users can easily query a table using SQL and view the results. Focus on features, style, design, and layout to provide a beautiful, smooth, and efficient query experience. Concentrate on the frontend only; no backend development is required. You may use stubs and mocks where necessary for the backend.
-
-**Ideal User:** Data analysts from any organization who will use the interface to query data and pass on the results to their business team.
-
-**Things to Note:**
-
-1. Use a JavaScript framework for the task, preferably Vue.js/Nuxt.js, but any framework would work. **DO NOT code** in vanilla JS.
-2. You are **NOT** restricted to using this particular data. You can use any external data as well if you prefer.
-3. Calculate the page load time of your app and include it in the README. Also, explain how you calculated the page load time.
-4. If you made any changes to optimize the page load time of your app, write all the steps you took in the README.
-
-**Submission Details:**
-
-1. Host the code in a version control system (e.g., Github, Gitlab) and provide the link to the repository.
-2. Host the web app online using services like Netlify, Surge, etc., and provide the link.
-
-**You will be judged on the following:**
-
-1. Code structure and readability.
-2. Page layout and feature set.
-3. Information hierarchy of all the content and components shown on the page(s) of your app.
-4. Page load time of your app.
-
-**Good luck!**
-
-## 👨‍💻 Contributors
+## 👨‍💻 Contributor
 
 <table>
   <tr>

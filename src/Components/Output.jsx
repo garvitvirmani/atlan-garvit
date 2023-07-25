@@ -2,7 +2,6 @@ import MainContext from "@/Utils/MainContext";
 import { useContext, useState } from "react";
 // import MainContext from "../../MainContext";
 // import ColumnDetails from "./ColumnDetails";
-// import Table from "./Table";
 import { CSVLink } from "react-csv";
 import ColumnDetails from "./ColumnDetails";
 import Table from "@/Components/UI/Table/Table";

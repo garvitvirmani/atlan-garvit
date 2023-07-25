@@ -1,3 +1,39 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["next", "next/core-web-vitals"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "experimentalObjectRestSpread": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "space-before-function-paren": [
+      0,
+      { "anonymous": "always", "named": "always" }
+    ],
+    "camelcase": 0,
+    "no-return-assign": 0,
+    "quotes": [
+      2,
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
+  },
+  "ignorePatterns": ["**/*.json"]
 }

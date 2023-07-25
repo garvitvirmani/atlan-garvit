@@ -1,5 +1,4 @@
 import Layout from "@/Components/Layout/Layout";
-import Navbar from "@/Components/Navbar/Navbar";
 import MainContext from "@/Utils/MainContext";
 import "@/styles/globals.css";
 import { useEffect, useMemo, useState } from "react";

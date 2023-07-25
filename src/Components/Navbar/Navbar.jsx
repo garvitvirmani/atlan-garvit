@@ -19,15 +19,20 @@ const Navbar = () => {
     {
       attributes: {
         title: "Github",
-        url: "",
+        url: "https://github.com/garvitvirmani/atlan-garvit",
       },
     },
-    { attributes: { title: "Resume", url: "" } },
+    {
+      attributes: {
+        title: "Resume",
+        url: "https://drive.google.com/file/d/1XtMnvE0W6_j4g775Kip6mFs-OX6tzhn3/view?usp=drivesdk",
+      },
+    },
     ,
     {
       attributes: {
         title: "SQL",
-        url: "",
+        url: "/SqlEditor",
       },
     },
   ];

@@ -28,7 +28,7 @@ For more comprehensive information, you can find detailed screenshots depicting 
 
 3. Implemented optimizations suggestions from framer-motion documents , By using the m and LazyMotion components, you can bring this down significantly, to just under 4.6kb for the initial render.
 
-4. I utilized Next.js as the framework, leveraging its Static Site Generation (SSG) feature to serve pages statically. For lightning-fast user experiences, I deployed it on Vercel's CDN.
+4. I utilized Next.js as the framework, leveraging its Static Site Generation (SSG) feature to serve pages statically also configure Nex.tjs for reducing the JS bundle size and chunk splitting . For lightning-fast user experiences, I deployed it on Vercel's CDN.
 
 5. The website is hosted on Vercel, a fast and free hosting service for JavaScript-based web apps, offering the benefits of a CDN and caching. It also provides free SSL during hosting, enhancing page security and ranking.
 

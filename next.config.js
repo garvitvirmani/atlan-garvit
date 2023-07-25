@@ -22,16 +22,6 @@ const nextConfig = {
           },
         ],
       },
-      {
-        // videos
-        source: "/public/videos/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=604800", // 1 week (604800 seconds)
-          },
-        ],
-      },
     ];
   },
 

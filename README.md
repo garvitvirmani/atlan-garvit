@@ -4,7 +4,7 @@
 
 **Link to the application:** [Atlan SQL Editor](https://atlan-garvit.vercel.app/)
 
-This is a web app that allows users to run SQL queries in an online editor and analyze the query results.
+This is a web app that allows users to run SQL queries in an online editor and analyze the query results. build on **Next.js** with animations from **framer-motion** and light weight css **tailwind-css**
 
 ## Data Dump
 
@@ -22,17 +22,19 @@ For more comprehensive information, you can find detailed screenshots depicting 
 
 ### 2. Optimizing the Page Load Time and other web vitals
 
-1. The application has been turned into a **PWA (Progressive Web App)** to optimize it, as Google promotes the use of such installable apps. This also allows the web app to be used offline as it can be installed.
+1. I added caching control headers to optimize the utilization of the browser's public caching mechanism. This configuration minimizes the number of requests sent to the server and enables the serving of pages from the cache memory whenever possible.
 
-2. The website has been designed to be responsive, even though such an application is less likely to be used on mobile devices. Absolute sizing has been minimized, and sizing units like **em, rem, vh, and vw** have been utilized. Media queries have been employed in most cases, except for a few instances where Bootstrap was used for rapid development.
+2. The website has been carefully designed to be responsive, despite its lesser likelihood of being accessed on mobile devices. We have minimized the use of absolute sizing and instead opted for sizing units like **em, rem, vh, and vw** to ensure flexibility. Media queries have been applied in most cases to achieve responsiveness, with only a few instances where Bootstrap was utilized for faster development.
 
-3. The website is hosted on Vercel, a fast and free hosting service for JavaScript-based web apps, offering the benefits of a CDN and caching. It also provides free SSL during hosting, enhancing page security and ranking.
+3. Implemented optimizations suggestions from framer-motion documents , By using the m and LazyMotion components, you can bring this down significantly, to just under 4.6kb for the initial render.
 
-4. React lazy loading has been implemented to load parts of the page that are not immediately required in the background.
+4. I utilized Next.js as the framework, leveraging its Static Site Generation (SSG) feature to serve pages statically. For lightning-fast user experiences, I deployed it on Vercel's CDN.
 
-5. Minimal dependencies have been used for the creation of the page.
+5. The website is hosted on Vercel, a fast and free hosting service for JavaScript-based web apps, offering the benefits of a CDN and caching. It also provides free SSL during hosting, enhancing page security and ranking.
 
-6. The code has been restructured to reuse components and minimize imports where necessary.
+6. Implemented optimizations suggestions from framer-motion documents , By using the m and LazyMotion components, you can bring this down significantly, to just under 4.6kb for the initial render.
+
+7. The code has been restructured to reuse components and minimize imports where necessary.
 
 ## Screenshots
 

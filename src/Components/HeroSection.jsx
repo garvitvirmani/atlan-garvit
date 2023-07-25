@@ -13,7 +13,7 @@ export default function HeroSection() {
       part_3: "",
       part_4: "Quick and Easy",
     },
-    subHeading: "Try now for free!!!",
+    subHeading: "Try now for free !!!",
   };
 
   const cardVariants = {
@@ -65,7 +65,7 @@ export default function HeroSection() {
               <TypeAnimation
                 sequence={["", 1000, data?.subHeading ?? "", 1000]}
                 repeat={0}
-                className="text-blue-800 text-[40px]"
+                className="text-blue-300 text-[40px]"
                 speed={30}
               />
             </m.div>

@@ -88,7 +88,8 @@ export default function HeroSection() {
                   alt="website trading"
                   priority
                   loading="eager"
-                  layout="responsive" // Set layout to responsive
+                  layout="intrinsic" // Set layout to intrinsic
+                  aspectRatio={600 / 450} // Set the aspect ratio to match the natural dimensions
                 />
               </m.div>
             </m.div>

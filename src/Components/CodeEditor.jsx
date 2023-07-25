@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import EditorPanel from "./EditorPanel";
 import Editor from "@monaco-editor/react";
 import MainContext from "@/Utils/MainContext";
@@ -9,14 +8,14 @@ const CodeEditor = () => {
 
   const options = {
     autoIndent: "full",
-    contextmenu: true,
+    contextmenu: false, // Disable the context menu
     fontFamily: "monospace",
     fontSize: 13,
     lineHeight: 24,
     hideCursorInOverviewRuler: true,
     matchBrackets: "always",
     minimap: {
-      enabled: true,
+      enabled: false, // Disable the minimap
     },
     scrollbar: {
       horizontalSliderSize: 4,
@@ -36,10 +35,11 @@ const CodeEditor = () => {
       </div>
       <div className="col-md-8 col-lg-9 col-xl-10 col-12 no-gutters">
         <Editor
-          height="300px"
+          height="300px" // Reduce the height as needed
           value={query}
           language="sql"
           theme={darkMode ? "vs-dark" : "vs-light"}
+          options={options}
           onChange={(newCode) => setQuery(newCode)}
         />
       </div>

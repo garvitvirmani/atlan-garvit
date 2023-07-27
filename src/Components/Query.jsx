@@ -1,9 +1,10 @@
 import MainContext from "@/Utils/MainContext";
 import SnackBar, { showSnackBar } from "@/Components/UI/SnackBar";
 import { useContext, useEffect, useState } from "react";
+import Image from "next/image";
 
 const Query = (props) => {
-  const { setQuery, queryHistory } = useContext(MainContext);
+  const { setQuery, queryHistory, setQueryHistory } = useContext(MainContext);
   const [searchQuery, setSearchQuery] = useState("");
   const [list, setList] = useState(queryHistory?.[props?.type]);
 
@@ -47,11 +48,30 @@ const Query = (props) => {
 
   return (
     <div className="query-wrapper">
-      <div className="search-bar">
+      <div className="search-bar flex items-center gap-2 p-1">
         <input
           placeholder="Search..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <Image
+          src={"/images/delete.svg"}
+          alt={""}
+          width={30}
+          height={30}
+          title={`Delete all ${props?.type} queries`}
+          onClick={() => {
+            setQueryHistory({
+              ...queryHistory,
+              [props?.type]: [],
+            });
+            setsnackBarMessage({
+              snackBarMessage: `${props?.type} Queries Deleted`,
+              isError: false,
+            });
+            setTimeout(() => setsnackBarMessage({}), 1000);
+          }}
+          className="cursor-pointer"
         />
       </div>
       {list?.length > 0 ? (

@@ -15,6 +15,35 @@ const Output = () => {
     console.log("Data to be exported");
   };
 
+  const ResultTable = ({ columns, values }) => {
+    return (
+      <table>
+        <thead>
+          <tr>
+            {columns.map((columnName) => (
+              <td key={columnName}>{columnName}</td>
+            ))}
+          </tr>
+        </thead>
+
+        <tbody>
+          {values.map(
+            (
+              row, // values is an array of arrays representing the results of the query
+              rowIndex
+            ) => (
+              <tr key={rowIndex}>
+                {row.map((value, cellIndex) => (
+                  <td key={cellIndex}>{value}</td>
+                ))}
+              </tr>
+            )
+          )}
+        </tbody>
+      </table>
+    );
+  };
+
   return (
     <div className="query-results w-[98%] dark:text-white">
       {queryHistory?.outputData?.length > 0 ? (
@@ -58,7 +87,13 @@ const Output = () => {
             </div>
           </div>
           {tab === 0 ? (
-            <Table result={queryHistory?.outputData}></Table>
+            queryHistory?.outputData.map((execResult, rIndex) => (
+              <ResultTable
+                key={rIndex}
+                columns={execResult.columns}
+                values={execResult.values}
+              />
+            ))
           ) : (
             <ColumnDetails result={queryHistory?.outputData} />
           )}

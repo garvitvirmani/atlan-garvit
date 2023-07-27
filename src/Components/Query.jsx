@@ -1,4 +1,5 @@
 import MainContext from "@/Utils/MainContext";
+import SnackBar, { showSnackBar } from "@/Components/UI/SnackBar";
 import { useContext, useEffect, useState } from "react";
 
 const Query = (props) => {
@@ -6,11 +7,27 @@ const Query = (props) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [list, setList] = useState(queryHistory?.[props?.type]);
 
+  const [snackBarMessage, setsnackBarMessage] = useState({
+    snackBarMessage: "",
+    isError: false,
+  });
+
   const renderQueryList = (array) => {
     return array?.map((i) => {
       return (
         <div className=" cursor-pointer query" key={i}>
-          <code onClick={() => setQuery(i)}>{i}</code>
+          <code
+            onClick={() => {
+              setQuery(i);
+              setsnackBarMessage({
+                snackBarMessage: "Query Selected !",
+                isError: false,
+              });
+              setTimeout(() => setsnackBarMessage({}), 1000);
+            }}
+          >
+            {i}
+          </code>
         </div>
       );
     });
@@ -44,6 +61,12 @@ const Query = (props) => {
           <span className="fa fa-exclamation-circle"></span>
           <p>No queries found.</p>
         </div>
+      )}
+      {snackBarMessage?.snackBarMessage?.length > 0 && (
+        <SnackBar
+          msg={snackBarMessage?.snackBarMessage}
+          isError={snackBarMessage?.isError}
+        />
       )}
     </div>
   );

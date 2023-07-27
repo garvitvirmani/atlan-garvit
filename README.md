@@ -4,7 +4,7 @@
 
 **Link to the application:** [Atlan SQL Editor](https://atlan-garvit.vercel.app/)
 
-This is a web app that allows users to run SQL queries in an online editor and analyze the query results. build on **Next.js** with animations from **framer-motion** and light weight css **tailwind-css**
+Introducing our web app - Run SQL Queries in Your Browser! Powered by SQL.js and Monaco editor from Microsoft, you can easily write, execute, and analyze SQL queries. Enjoy light or dark mode, save queries, and view your history. Built on Next.js with framer-motion animations and lightweight tailwind-css. Start exploring your data now!
 
 ## Data Dump
 

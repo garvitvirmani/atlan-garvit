@@ -61,7 +61,7 @@ const Output = () => {
               className={`tabs ${tab === 1 ? "active" : ""} cursor-pointer`}
               onClick={() => setTab(1)}
             >
-              Table Data
+              Schema
             </span>
           </div>
           <div className="query-details">

@@ -115,23 +115,23 @@ const EditorPanel = () => {
   };
 
   return (
-    <div className="flex gap-6">
-      <div className="btn primary-btn">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="btn primary-btn p-2">
         <div onClick={() => runQuery()}>
           <CTAButton text={"RUN"} deactivate={true} color="light" />
         </div>
       </div>
-      <div className="btn secondary-btn">
+      <div className="btn secondary-btn p-2">
         <div onClick={() => saveQuery()}>
           <CTAButton text={"SAVE"} deactivate={true} />
         </div>
       </div>
-      <div className="btn alert-btn">
+      <div className="btn alert-btn p-2">
         <div onClick={() => cleanCode()}>
           <CTAButton text={"Clear Code"} deactivate={true} />
         </div>
       </div>
-      <div className="btn alert-btn">
+      <div className="btn alert-btn p-2">
         <div onClick={() => clearQuery()}>
           <CTAButton text={"New Query"} deactivate={true} />
         </div>

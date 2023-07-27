@@ -170,7 +170,7 @@ th {
 .query-table {
   margin: 0rem 1.5rem 1rem 0rem;
   /* width: 100%; */
-  height: 72vh;
+  max-height: 72vh;
   overflow: auto;
 }
 .query-table table {

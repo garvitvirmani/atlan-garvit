@@ -4,7 +4,7 @@
 
 **Link to the application:** [Atlan SQL Editor](https://atlan-garvit.vercel.app/)
 
-This is a web app that allows users to run SQL queries in an online editor and analyze the query results. build on **Next.js** with animations from **framer-motion** and light weight css **tailwind-css**
+## Introducing our web app - Run SQL Queries in Your Browser! Powered by SQL.js and Monaco editor from Microsoft, you can easily write, execute, and analyze SQL queries. Enjoy light or dark mode, save queries, and view your history. Built on Next.js with framer-motion animations and lightweight tailwind-css. Start exploring your data now!
 
 ## Data Dump
 
@@ -49,12 +49,14 @@ For more comprehensive information, you can find detailed screenshots depicting 
 ![]("https://raw.githubusercontent.com/garvitvirmani/atlan-screenshots/master/atlan1.png)
 
 <img width="720" alt="Screenshot" src="https://raw.githubusercontent.com/garvitvirmani/atlan-screenshots/master/atlan1.png">
-<img width="720" alt="Screenshot" src="https://raw.githubusercontent.com/garvitvirmani/atlan-screenshots/master/Screenshot%20(48).png">
+<!-- <img width="720" alt="Screenshot" src="https://raw.githubusercontent.com/garvitvirmani/atlan-screenshots/master/Screenshot%20(48).png">
 <img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(49).png?raw=true">
 <img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(50).png?raw=true">
 <img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(51).png?raw=true">
-<img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(52).png?raw=true">
-<img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(53).png?raw=true">
+<img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(52).png?raw=true"> -->
+<img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/final%202.png?raw=true"> 
+
+<img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/latest.png?raw=true">
 <img width="720" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/Screenshot%20(54).png?raw=true">
 <img width="360" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/WhatsApp%20Image%202023-07-25%20at%2014.29.54.jpeg?raw=true">
 <img width="360" alt="Screenshot" src="https://github.com/garvitvirmani/atlan-screenshots/blob/master/WhatsApp%20Image%202023-07-25%20at%2014.29.55%20(1).jpeg?raw=true">

@@ -9,7 +9,7 @@ export default function HeroSection() {
   const data = {
     Heading: {
       part_1: "",
-      part_2: "Best SQL editor",
+      part_2: "Run SQL Quires right from your Browser",
       part_3: "",
       part_4: "Quick and Easy",
     },

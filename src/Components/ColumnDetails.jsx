@@ -1,10 +1,10 @@
 import { getTableColumns } from "@/Utils/tableHelper";
 import { dumpData } from "../../public/dumpData";
 
-const ColumnDetails = () => {
+const ColumnDetails = ({ result }) => {
   return (
     <div>
-      <table>{getTableColumns(dumpData)}</table>
+      <table>{getTableColumns(result)}</table>
     </div>
   );
 };

@@ -17,30 +17,32 @@ const Output = () => {
 
   const ResultTable = ({ columns, values }) => {
     return (
-      <table>
-        <thead>
-          <tr>
-            {columns.map((columnName) => (
-              <td key={columnName}>{columnName}</td>
-            ))}
-          </tr>
-        </thead>
+      <div className="query-table">
+        <table>
+          <thead>
+            <tr>
+              {columns.map((columnName) => (
+                <td key={columnName}>{columnName}</td>
+              ))}
+            </tr>
+          </thead>
 
-        <tbody>
-          {values.map(
-            (
-              row, // values is an array of arrays representing the results of the query
-              rowIndex
-            ) => (
-              <tr key={rowIndex}>
-                {row.map((value, cellIndex) => (
-                  <td key={cellIndex}>{value}</td>
-                ))}
-              </tr>
-            )
-          )}
-        </tbody>
-      </table>
+          <tbody>
+            {values.map(
+              (
+                row, // values is an array of arrays representing the results of the query
+                rowIndex
+              ) => (
+                <tr key={rowIndex}>
+                  {row.map((value, cellIndex) => (
+                    <td key={cellIndex}>{value}</td>
+                  ))}
+                </tr>
+              )
+            )}
+          </tbody>
+        </table>
+      </div>
     );
   };
 
@@ -86,17 +88,17 @@ const Output = () => {
               </CSVLink>
             </div>
           </div>
-          {tab === 0 ? (
-            queryHistory?.outputData.map((execResult, rIndex) => (
-              <ResultTable
-                key={rIndex}
-                columns={execResult.columns}
-                values={execResult.values}
-              />
-            ))
-          ) : (
-            <ColumnDetails result={queryHistory?.outputData} />
-          )}
+          {tab === 0
+            ? queryHistory?.outputData.map((execResult, rIndex) => (
+                <ResultTable
+                  key={rIndex}
+                  columns={execResult.columns}
+                  values={execResult.values}
+                />
+              ))
+            : queryHistory?.outputData.map((execResult, rIndex) => (
+                <ColumnDetails result={execResult?.columns} key={rIndex} />
+              ))}
         </div>
       ) : (
         <div className="placeholder-text dark:text-white">

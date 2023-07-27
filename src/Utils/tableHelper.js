@@ -23,8 +23,7 @@ const getTableHeadFromData = (arr) => {
 };
 
 const getTableColumns = (arr) => {
-  const keys = Object.keys(arr[0]);
-  return keys.map((i, index) => {
+  return arr.map((i, index) => {
     return (
       <tr key={index}>
         <td>{i}</td>

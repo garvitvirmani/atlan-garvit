@@ -6,13 +6,24 @@ import { useEffect, useMemo, useState } from "react";
 export default function App({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(true);
 
-  const [query, setQuery] = useState("SELECT * FROM internetData;");
+  // old
+  // const [query, setQuery] = useState("SELECT * FROM internetData;");
+  // const [queryHistory, setQueryHistory] = useState({
+  //   saved: [
+  //     "SELECT * FROM internetData;",
+  //     "SELECT id, first_name, last_name FROM internetData;",
+  //   ],
+  //   history: ["SELECT * FROM internetData;"],
+  //   outputData: [],
+  // });
+
+  // new
+  const [query, setQuery] = useState("");
   const [queryHistory, setQueryHistory] = useState({
     saved: [
-      "SELECT * FROM internetData;",
-      "SELECT id, first_name, last_name FROM internetData;",
+      "CREATE TABLE employees (\r\n  id INT PRIMARY KEY,\r\n  first_name VARCHAR(50),\r\n  last_name VARCHAR(50),\r\n  department VARCHAR(50),\r\n  salary DECIMAL(10, 2)\r\n);\r\nINSERT INTO employees (id, first_name, last_name, department, salary)\r\nVALUES\r\n  (1, 'John', 'Doe', 'IT', 55000.00),\r\n  (2, 'Jane', 'Smith', 'HR', 60000.00),\r\n  (3, 'Bob', 'Johnson', 'Finance', 65000.00),\r\n  (4, 'Alice', 'Williams', 'Marketing', 50000.00);\r\nSELECT * FROM employees;\r\n",
     ],
-    history: ["SELECT * FROM internetData;"],
+    history: [],
     outputData: [],
   });
 

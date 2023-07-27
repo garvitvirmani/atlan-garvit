@@ -99,6 +99,15 @@ const EditorPanel = () => {
     }));
     initializeDB();
     setsnackBarMessage({
+      snackBarMessage: "New Query Created",
+      isError: false,
+    });
+    setTimeout(() => setsnackBarMessage({}), 1000);
+  };
+
+  const cleanCode = () => {
+    setQuery("");
+    setsnackBarMessage({
       snackBarMessage: "Cleared",
       isError: false,
     });
@@ -118,8 +127,13 @@ const EditorPanel = () => {
         </div>
       </div>
       <div className="btn alert-btn">
+        <div onClick={() => cleanCode()}>
+          <CTAButton text={"Clear Code"} deactivate={true} />
+        </div>
+      </div>
+      <div className="btn alert-btn">
         <div onClick={() => clearQuery()}>
-          <CTAButton text={"CLEAR"} deactivate={true} />
+          <CTAButton text={"New Query"} deactivate={true} />
         </div>
       </div>
       {snackBarMessage?.snackBarMessage?.length > 0 && (

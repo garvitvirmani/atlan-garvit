@@ -26,7 +26,7 @@ const Query = (props) => {
               setTimeout(() => setsnackBarMessage({}), 1000);
             }}
           >
-            {i}
+            {i.length > 80 ? i.slice(0, 80) + "..." : i}
           </code>
         </div>
       );

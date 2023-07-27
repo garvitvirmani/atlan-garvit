@@ -15,19 +15,19 @@ const Query = (props) => {
   const renderQueryList = (array) => {
     return array?.map((i) => {
       return (
-        <div className=" cursor-pointer query" key={i}>
-          <code
-            onClick={() => {
-              setQuery(i);
-              setsnackBarMessage({
-                snackBarMessage: "Query Selected !",
-                isError: false,
-              });
-              setTimeout(() => setsnackBarMessage({}), 1000);
-            }}
-          >
-            {i.length > 80 ? i.slice(0, 80) + "..." : i}
-          </code>
+        <div
+          className=" cursor-pointer query"
+          key={i}
+          onClick={() => {
+            setQuery(i);
+            setsnackBarMessage({
+              snackBarMessage: "Query Selected !",
+              isError: false,
+            });
+            setTimeout(() => setsnackBarMessage({}), 1000);
+          }}
+        >
+          <code>{i.length > 80 ? i.slice(0, 80) + "..." : i}</code>
         </div>
       );
     });
